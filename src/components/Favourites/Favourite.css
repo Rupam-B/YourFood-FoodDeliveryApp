@@ -15,3 +15,11 @@
    display: flex;
    align-items: center;
 }
+
+
+@media screen and (max-width: 500px) {
+    .containerr{
+        padding:2rem 4rem;
+        margin-top: 2px;
+    }
+    }
