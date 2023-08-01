@@ -7,63 +7,63 @@ const Favourite = () => {
             id:1,
             src:"/assets/card1.jpg",
             heading:"Fruit Bread",
-            para:"",
+            para:"₹ 250.00",
             buttonPara:"Order Now"
         },
         {
             id:2,
             src:"/assets/card2.jpg",
             heading:"Manchurian",
-            para:"",
+            para:"₹ 320.00",
             buttonPara:"Order Now"
         },
         {
             id:3,
             src:"/assets/card3.jpg",
             heading:"Ham Burger",
-            para:"",
+            para:"₹ 350.00",
             buttonPara:"Order Now"
         },
         {
             id:4,
             src:"/assets/card4.jpg",
             heading:"Mutton Margherita",
-            para:"",
+            para:"₹ 450.00",
             buttonPara:"Order Now"
         },
         {
             id:5,
             src:"/assets/card5.jpg",
             heading:"Vegetable Salad",
-            para:"",
+            para:"₹ 160.00",
             buttonPara:"Order Now"
         },
         {
             id:6,
             src:"/assets/card6.jpg",
             heading:"Mexico Pizza",
-            para:"",
+            para:"₹ 510.00",
             buttonPara:"Order Now"
         },
         {
             id:7,
             src:"/assets/card7.jpg",
             heading:"Bread Edd Crambled",
-            para:"",
+            para:"₹ 230.00",
             buttonPara:"Order Now"
         },
         {
             id:8,
             src:"/assets/card8.jpg",
             heading:"Kabab Pind",
-            para:"",
+            para:"₹ 375.00",
             buttonPara:"Order Now"
         },
         {
             id:9,
             src:"/assets/card9.jpg",
             heading:"Fish Curry",
-            para:"",
+            para:"₹ 299.00",
             buttonPara:"Order Now"
         }
     ]
@@ -77,8 +77,8 @@ const Favourite = () => {
   <img src={item.src} className="card-img-top" alt="..." height="200px"/>
   <div className="card-body">
     <h5 className="card-title text-center">{item.heading}</h5>
-    <p className="card-text">{item.para}</p>
-    <a href="/" className="btn btn-danger">{item.buttonPara}</a>
+    <h6 className="card-text text-center">{item.para}</h6>
+    <a href="/" className="btn btn-danger text-center">{item.buttonPara}</a>
   </div>
 </div>
     ))} 

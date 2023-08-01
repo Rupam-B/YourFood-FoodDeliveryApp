@@ -3,7 +3,7 @@ import './App.css';
 import {Routes, Route} from "react-router-dom"
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-// import Offers from './components/Offers';
+import Restaurant from './components/Restaurants/Restaurant';
 
 
 
@@ -13,6 +13,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/Restaurants' element={<Restaurant/>}/>
       </Routes>
        
       </>
