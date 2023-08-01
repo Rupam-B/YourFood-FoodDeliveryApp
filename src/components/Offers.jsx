@@ -45,8 +45,8 @@ const Offers = () => {
         <div className="container">
           <div className="carousel-caption text-end">
             <h1>Chicken Strew Soup</h1>
-            <p>Healthy veggies, Fresh chicken, Pulses, Ginger Flavour with salted Spice</p>
-            <p><a className="btn btn-lg btn-danger" href="/">Apply Coupon Upto 60% off</a></p>
+            <p>Healthy veggies, Fresh chicken, Pulses, Ginger Flavour</p>
+            <p><a className="btn btn-lg btn-danger" href="/">Coupon! Upto 60% off</a></p>
           </div>
         </div>
       </div>
