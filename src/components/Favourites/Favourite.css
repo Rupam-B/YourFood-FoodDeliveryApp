@@ -1,0 +1,17 @@
+
+.containerr{
+    padding:4rem 8rem;
+    background-color: rgb(34, 32, 32);
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-body{
+    background: transparent;
+}
+
+.card{
+   margin: 2rem;
+   display: flex;
+   align-items: center;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Offers from './Offers'
+import Favourite from './Favourites/Favourite'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <h3>The Delicious Food Store</h3>
     </div>
     <Offers/>
+    <Favourite/>
     </>
   )
 }
