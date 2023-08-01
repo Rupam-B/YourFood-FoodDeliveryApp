@@ -1,0 +1,29 @@
+.black-bgrnd{
+    background: rgb(12, 12, 12);
+    width: 100vw;
+}
+.Restimg{
+    position: absolute;
+    bottom: 16rem;
+    right: 4rem;
+    border-radius: 1rem;
+    width: 20rem;
+    height:16rem;
+}
+
+.Rest-Card-img{
+    width: 20rem;
+    height: 20rem;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .Restimg{
+        display: none;
+    }
+    .Rest-Card-img{
+        width: 28rem;
+        height: 15rem;
+    }
+    }
