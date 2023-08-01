@@ -13,7 +13,7 @@ const Offers = () => {
     <div className="carousel-inner">
       <div className="carousel-item active">
       <div class="image-container">
-      <img src="/assets/offers111.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%" height="200px"  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="/assets/offers111.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%"  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">
@@ -26,7 +26,7 @@ const Offers = () => {
       </div>
       <div className="carousel-item">
       <div class="image-container">
-      <img src="/assets/offers211.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%" height="200px"  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="/assets/offers211.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%"   aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">
@@ -39,7 +39,7 @@ const Offers = () => {
       </div>
       <div className="carousel-item">
       <div class="image-container">
-      <img src="/assets/offers3111.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%" height="200px"  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="/assets/offers3111.jpg" alt="loading problem" srcset="" className="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">

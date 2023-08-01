@@ -2,29 +2,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 68vh;
+    height: 75vh;
     position: relative;
     width: 100vw;
+    margin-bottom: 5px;
   }
 
  .Home img{
   height: 75vh;
     width: 100vw;
     z-index: -1;
-  /* position: relative; */
  } 
-/* .Home::before{
-    content: '';
-    background: url('/public/assets/background\ 3.jpg') no-repeat center center/cover;
-    -webkit-tap-highlight-color: transparent;
-    height: 80vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.8;
-} */
+
 .Home h1{
     font-size: 8rem; 
     font-weight: 900;
@@ -35,18 +24,7 @@
     top: 30%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/* .Home h1::after{
-    content: '';
-    background: url('/public/assets/background\ 7.jpg') no-repeat center center/cover;
-    height: 30vh;
-    width: 20vw;
-    position: absolute;
-    border: none;
-    border-radius: 70%;
-    opacity: 0.8;
-    top: 40%;
-    left: 7%;
-} */
+
 .Home h3{
   color:rgb(245, 225, 225);
   font-size: 2rem;
@@ -55,22 +33,13 @@
   right: 5%;
   
 }
-/* .Home h3::before{
-    content: '';
-    background: url('/public/assets/background\ 2.jpg') no-repeat center center/cover;
-    height: 30vh;
-    width: 20vw;
-    position: absolute;
-    border: none;
-    border-radius: 70%;
-    opacity: 0.7;
-    bottom: 20%;
-    left: 7%;
-} */
-
-
 
 /* Offers */
+
+.carousel-item img{
+  height: 35vh;
+
+}
 .offers{
   padding-top: 5px;
   margin-top: 10px;
@@ -79,7 +48,7 @@
     position: relative;
   }
 
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +56,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Change the last value (0.5) to control the opacity */
   }
-  img {
+img {
     display: block;
   }
 
@@ -98,23 +67,28 @@
   /* Media-Query */
   @media screen and (max-width: 500px) {
     .Home{
-      height: 62vh;
+      height: 65vh;
+      margin-bottom: 2px;
     }
     .Home img{
-      height: 64vh;
+      height: 65vh;
      } 
     .Home h1 {
       font-size: 4rem;
-      left: 5%;
-      top: 30%;
+      left: 10%;
+      top: 36%;
     }
     .Home h3 {
       font-size: 1.5rem;
-      padding-top: 17%;
-      right: 15%;
+      padding-top: 13%;
+      right: 18%;
     }
     .carousel-item{
       padding: 10px 0;
+    }
+    .carousel-item img{
+      height: 30vh;
+
     }
 
 
