@@ -71,6 +71,10 @@
 
 
 /* Offers */
+.offers{
+  padding-top: 5px;
+  margin-top: 10px;
+}
 .image-container {
     position: relative;
   }
@@ -97,7 +101,7 @@
       height: 62vh;
     }
     .Home img{
-      height: 65vh;
+      height: 63vh;
      } 
     .Home h1 {
       font-size: 4rem;
