@@ -1,5 +1,7 @@
 import React from 'react'
-import './Favourite.css'
+// import React, { useEffect, useState } from 'react'
+import './Favourite.css';
+// import axios from "axios";
 
 const Favourite = () => {
     const cardData =[
@@ -67,6 +69,18 @@ const Favourite = () => {
             buttonPara:"Order Now"
         }
     ]
+    // const [cardData,setCardData] = useState();
+    // useEffect(() => {
+    //     axios.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+    //       .then(response => {
+    //         console.log(response)
+    //         setCardData(response.data.meals);
+    //       })
+    //       .catch(error => {
+    //         console.error('Error fetching data:', error);
+    //       });
+    //   }, []);
+
 
   return (
     <>
@@ -78,7 +92,7 @@ const Favourite = () => {
   <div className="card-body d-flex flex-column justify-content-center align-items-center">
     <h5 className="card-title ">{item.heading}</h5>
     <h6 className="card-text">{item.para}</h6>
-    <a href="/" className="btn btn-danger ">{item.buttonPara}</a>
+    <a href="/" className="btn btn-danger ">Order Now</a>
   </div>
 </div>
     ))} 

@@ -8,7 +8,7 @@ const Home = () => {
     <>
     <div className='Home'>
       <div className='image-container'>
-        <img src="/assets/background2.jpg" alt="" srcset="" />
+        <img src="/assets/background2.jpg" alt="" />
       <div className='overlay'></div>
       </div>
       <h1>YourFood</h1>
