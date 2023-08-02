@@ -1,5 +1,5 @@
 .containerr {
-    padding: 4rem 4rem;
+    padding: 4rem 3rem;
     background-color: rgb(34, 32, 32);
     margin-top: 5px;
     display: flex;
@@ -11,7 +11,7 @@
 }
 
 .card {
-    margin: 2rem 3rem;
+    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
