@@ -1,26 +1,30 @@
-
-.containerr{
-    padding:4rem 4rem;
+.containerr {
+    padding: 4rem 4rem;
     background-color: rgb(34, 32, 32);
     margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
 }
-.card-body{
+
+.card-body {
     background: transparent;
 }
 
-.card{
-   margin: 2rem 3.5rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.card {
+    margin: 2rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 @media screen and (max-width: 500px) {
-    .containerr{
-        padding:2rem 2rem;
+    .containerr {
+        padding: 2rem 2rem;
         margin-top: 2px;
     }
+
+    .card {
+        margin: 2rem;
     }
+}
