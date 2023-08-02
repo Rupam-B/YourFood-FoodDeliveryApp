@@ -1,14 +1,16 @@
 .black-bgrnd{
     background: rgb(12, 12, 12);
     width: 100vw;
+    margin: 0;
 }
 .Restimg{
     position: absolute;
-    bottom: 16rem;
+    bottom: 17rem;
     right: 4rem;
-    border-radius: 1rem;
-    width: 20rem;
+    border-radius: 2rem;
+    width: 23rem;
     height:16rem;
+    opacity: 0.7;
 }
 
 .Rest-Card-img{
