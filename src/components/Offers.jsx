@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const Offers = () => {
+
+    useEffect(() => {
+      new window.bootstrap.Carousel(document.getElementById('myCarousel'), {
+        interval: 2500 
+      });
+    }, []);
    
   return (
     <>
