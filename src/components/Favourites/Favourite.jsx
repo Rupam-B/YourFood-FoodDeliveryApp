@@ -22,7 +22,7 @@ const Favourite = () => {
         {
             id:3,
             src:"/assets/card3.jpg",
-            heading:"Ham Burger",
+            heading:"Mutton Burger",
             para:"₹ 350.00",
             buttonPara:"Order Now"
         },

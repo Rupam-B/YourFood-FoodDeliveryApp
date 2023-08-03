@@ -21,7 +21,7 @@ const FoodRestaurant = () => {
     {
         id:3,
         src:"/assets/card3.jpg",
-        heading:"Ham Burger",
+        heading:"Mutton Burger",
         para:"₹ 350.00",
         buttonPara:"Order Now"
     },
@@ -49,7 +49,9 @@ const FoodRestaurant = () => {
   ]
   return (
     <>
-    <section className="bg-dark text-center contaainer">
+    <div className='FoodRestaurant'>
+
+    <div className="bg-dark text-center contaainer">
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
         <h1 className="fw-bolder text-danger">Welcome to Silver Oak</h1>
@@ -60,30 +62,31 @@ const FoodRestaurant = () => {
         </p>
       </div>
     </div>
-    </section>
+    </div>
 
     
 
     <div className='rest-card'>
         {RestCardData.map((items, index) => (
-          <div class="col border-none">
-          <div class="card shadow-sm">
-            <img src={items.src} alt="" width='100%' height='225'/>
-            <div class="card-body wheatbg">
-              <p class="card-text text-white">هذه بطاقة أوسع مع نص داعم أدناه كمقدمة طبيعية لمحتوى إضافي. هذا المحتوى أطول قليلاً.</p>
+          <div class="col border-none main-card"  key={items.id}>
+          <div class="card shadow-sm main-card">
+            <img src={items.src} alt="" width='100%' height='300' style={{borderRadius:'2rem 2rem 0 0'}}/>
+            <div class="card-body wheatbg" style={{borderRadius:'0 0 2rem 2rem'}}>
+              <p class="card-text fw-bolder">{items.heading}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">عرض</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">تعديل</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.para}</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.buttonPara}</button>
                 </div>
-                <small class="text-body-secondary">9 دقائق</small>
               </div>
             </div>
           </div>
         </div>
+        
         ))}
     </div>
 
+  </div>
     </>
   )
 }
