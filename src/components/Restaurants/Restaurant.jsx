@@ -1,5 +1,6 @@
 import React from 'react'
 import './Restaurant.css'
+import { Link } from 'react-router-dom'
 
 const Restaurant = () => {
 
@@ -90,7 +91,7 @@ const Restaurant = () => {
           <h3 className="mb-0 text-white pb-2">{item.Name}</h3>
           <div className="mb-1 body-secondary text-danger">Rating {item.rating}</div>
           <p className="card-text mb-auto pb-2 text-white">{item.menu}</p>
-          <button onClick={(()=>{window.location.assign('/FoodRestaurant')})} className='btn btn-dark w-50 mt-2 text-primary'>Details</button>
+          <Link to="/FoodRestaurant" className='btn btn-dark w-50 mt-2 text-primary'>Details</Link>
         </div>
         <div className="col-auto d-lg-block">
           <img src={item.src} className="bd-placeholder-img Rest-Card-img" alt="..."  />
