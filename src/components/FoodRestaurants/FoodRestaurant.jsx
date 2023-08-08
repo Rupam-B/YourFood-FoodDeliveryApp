@@ -6,13 +6,13 @@ import FoodRestaurantsdata1 from './FoodRestaurantsData';
 const FoodRestaurant = () => {
   let { id } = useParams();
   id = parseInt(id);
+
+
   const accessdata = FoodRestaurantsdata1.FoodRestaurantsdata1;
-// console.log(accessdata,accessdata[0].id,id);
+
+
   const d1 = accessdata.find(items => items.id === id);
-  console.log(d1)
-  console.log(d1.hotelName)
-
-
+  
 
   
   const emailLocation =()=>{
