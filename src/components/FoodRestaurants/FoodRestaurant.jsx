@@ -35,7 +35,7 @@ const FoodRestaurant = () => {
               <h1 className="fw-bolder text-danger">{d1.hotelName}</h1>
               <p className="lead text-primary">{d1.state}</p>
               <p>
-                <a onClick={emailLocation} id='emailButton' href="/" className="btn btn-primary mx-2"> Email </a>
+                <button onClick={emailLocation} className="btn btn-primary mx-2"> Email </button>
                 <a href="/Restaurants" className="btn btn-secondary mx-2">Call</a>
               </p>
             </div>
