@@ -51,8 +51,8 @@ const FoodRestaurant = () => {
         <div  className='rest-card'>
       {d1.data.map((items)=>(
         <div key={items.id} class="col border-none main-card" >
-          <div class="card shadow-sm main-card">
-            <img src={items.src} alt="" width='100%' height='300' className='object-fit' style={{ borderRadius: '2rem 2rem 0 0' }} />
+          <div class="card shadow-sm main-card ">
+            <img src={items.src} alt="" width='100%'  className='object-fit adjst-hgt' style={{ borderRadius: '2rem 2rem 0 0' }} />
             <div class="card-body wheatbg" style={{ borderRadius: '0 0 2rem 2rem' }}>
               <p class="card-text fw-bolder">{items.FoodName}</p>
               <div class="d-flex justify-content-between align-items-center">

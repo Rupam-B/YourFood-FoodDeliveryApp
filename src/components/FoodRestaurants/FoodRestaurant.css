@@ -30,6 +30,10 @@
     border-color: wheat;
   }
 
+  .adjst-hgt{
+    height: 18rem;
+  }
+
 
 
 
@@ -49,5 +53,8 @@
         grid-template-columns: repeat(1 , 1fr);
         padding: 1rem 1rem;
     }
+    .adjst-hgt{
+        height: 14rem;
+      }
     
     }
