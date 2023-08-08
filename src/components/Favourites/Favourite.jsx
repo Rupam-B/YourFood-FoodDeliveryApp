@@ -87,8 +87,8 @@ const Favourite = () => {
     <div className='containerr'>
 
     {cardData.map((item, index) => (
-      <div className="card" style={{width:'18rem'}} key={item.id}>
-  <img src={item.src} className="card-img-top object-fit" alt="..." height="200px"/>
+      <div className="card adjst-wd"  key={item.id}>
+  <img src={item.src} className="card-img-top object-fit " alt="..." height="200px"/>
   <div className="card-body d-flex flex-column justify-content-center align-items-center">
     <h5 className="card-title ">{item.heading}</h5>
     <h6 className="card-text">{item.para}</h6>
