@@ -13,7 +13,7 @@ const FoodRestaurant = () => {
   console.log(d1.hotelName)
 
 
-  const emailButton = document.getElementById('emailButton');
+
   
   const emailLocation =()=>{
     const to = 'rupam.banerje@gmail.com';
@@ -24,6 +24,12 @@ const FoodRestaurant = () => {
     
     window.location.href = mailtoUrl;
   };
+
+  const callLocation =()=>{
+    const phoneNumber = '+917000771487'; 
+      const telUrl = `tel:${phoneNumber}`;
+      window.location.href = telUrl;
+    };
 
   return (
     <>
@@ -36,7 +42,7 @@ const FoodRestaurant = () => {
               <p className="lead text-primary">{d1.state}</p>
               <p>
                 <button onClick={emailLocation} className="btn btn-primary mx-2"> Email </button>
-                <a href="/Restaurants" className="btn btn-secondary mx-2">Call</a>
+                <button onClick={callLocation} className="btn btn-secondary mx-2">Call</button>
               </p>
             </div>
           </div>
