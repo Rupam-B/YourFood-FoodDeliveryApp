@@ -46,7 +46,7 @@
         /* background: rgb(20, 15, 15); */
         display: grid;
         grid-template-columns: repeat(1 , 1fr);
-        padding: 2rem 3rem;
+        padding: 2rem 1rem;
     }
     
     }
