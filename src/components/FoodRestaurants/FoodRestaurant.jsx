@@ -11,6 +11,20 @@ const FoodRestaurant = () => {
   const d1 = accessdata.find(items => items.id === id);
   console.log(d1)
   console.log(d1.hotelName)
+
+
+  const emailButton = document.getElementById('emailButton');
+  
+  const emailLocation =()=>{
+    const to = 'rupam.banerje@gmail.com';
+    const subject = 'Regarding Inquiry';
+    const body = 'Hello,\n\nI am interested in your services.\n\nSincerely,\n[Your Name]';
+    
+    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <>
       
@@ -21,7 +35,7 @@ const FoodRestaurant = () => {
               <h1 className="fw-bolder text-danger">{d1.hotelName}</h1>
               <p className="lead text-primary">{d1.state}</p>
               <p>
-                <a href="/" className="btn btn-primary mx-2"> Email </a>
+                <a onClick={emailLocation} id='emailButton' href="/" className="btn btn-primary mx-2"> Email </a>
                 <a href="/Restaurants" className="btn btn-secondary mx-2">Call</a>
               </p>
             </div>
