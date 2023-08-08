@@ -8,17 +8,22 @@ import FoodRestaurant from './components/FoodRestaurants/FoodRestaurant';
 
 
 
+
+
+
 function App() {
+ 
+  
   return (
     <>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/Restaurants' element={<Restaurant/>}/>
-        <Route path='/FoodRestaurant' element={<FoodRestaurant/>}/>
+        <Route path='/FoodRestaurant/:id' element={<FoodRestaurant/>}/>
       </Routes>
-       
-      </>
+
+    </>
   );
 }
 

@@ -32,7 +32,7 @@ const Offers = () => {
       </div>
       <div className="carousel-item">
       <div className="image-container">
-      <img src="/assets/offers211.jpg" alt="loading problem"  className="bd-placeholder-img" width="100%"   aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="/assets/offers211.jpg" alt="loading problem"  className="bd-placeholder-img object-fit" width="100%"   aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">
