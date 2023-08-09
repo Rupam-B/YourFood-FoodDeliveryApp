@@ -1,0 +1,32 @@
+
+
+.page-container{
+    overflow: hidden;
+}
+.bgrnd-blk{
+    background-color: rgb(10, 0, 0);
+    height: 23vh;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+}
+.check-out-heading{
+    color: white;
+    font-weight: bolder;
+    padding-top: 4rem;
+}
+
+
+.pdng-tp{
+    padding-top: 3rem;
+}
+.pdng-bt{
+    padding-bottom: 3rem;
+}
+
+.cart-show-img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: 0 1rem 0 0;
+    object-fit: cover;
+}

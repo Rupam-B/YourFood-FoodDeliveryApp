@@ -1,6 +1,7 @@
 import React from 'react'
 // import React, { useEffect, useState } from 'react'
 import './Favourite.css';
+import { Link } from 'react-router-dom';
 // import axios from "axios";
 
 const Favourite = () => {
@@ -92,7 +93,7 @@ const Favourite = () => {
   <div className="card-body d-flex flex-column justify-content-center align-items-center">
     <h5 className="card-title ">{item.heading}</h5>
     <h6 className="card-text">{item.para}</h6>
-    <a href="/" className="btn btn-danger ">Order Now</a>
+    <Link to={'/Cart'} className='btn btn-danger'>Order Now</Link>
   </div>
 </div>
     ))} 
