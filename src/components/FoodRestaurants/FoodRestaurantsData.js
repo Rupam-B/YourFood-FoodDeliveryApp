@@ -130,10 +130,10 @@ const FoodRestaurantsdata1 = [
             src: 'https://b.zmtcdn.com/data/dish_photos/c5f/e9ba78707fb2cc18991d98a1bfbb1c5f.jpg'
         }, {
             id: 5,
-            FoodName: 'Roti, Rice Mix, veg',
+            FoodName: 'Roti, Rice, Mix veg',
             Cost: '240',
             rating: '4.6',
-            src: 'https://b.zmtcdn.com/data/pictures/5/19903245/79ebf92afe8c01963b338c345846a5c6_o2_featured_v2.jpg'
+            src: 'https://images.unsplash.com/photo-1680993032090-1ef7ea9b51e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZCUyMHRoYWxpfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
         }, {
             id: 6,
             FoodName: 'South Indian thaali',
@@ -356,7 +356,7 @@ const FoodRestaurantsdata1 = [
             FoodName: 'Butter Cheezi Momoz',
             Cost: '180',
             rating: '4.5',
-            src: 'https://b.zmtcdn.com/data/pictures/2/19823482/3248f7b80babdb632c6ba500fc88d718_o2_featured_v2.jpg?output-format=webp'
+            src: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9tb3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
         }, {
             id: 4,
             FoodName: 'Moong Daal Halwa',
