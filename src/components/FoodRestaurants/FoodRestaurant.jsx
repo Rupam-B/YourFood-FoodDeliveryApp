@@ -2,6 +2,7 @@ import React from 'react'
 import './FoodRestaurant.css'
 import { useParams } from 'react-router-dom';
 import FoodRestaurantsdata1 from './FoodRestaurantsData';
+import { Link } from 'react-router-dom';
 
 const FoodRestaurant = () => {
   let { id } = useParams();
