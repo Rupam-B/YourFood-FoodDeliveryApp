@@ -6,10 +6,11 @@ const cart_reducer = (state, action) => {
 
         const existingProduct = state.cart.find(item => item.id === id);
          if (existingProduct) {
-            
+            alert("Item Added to cart")
             const updatedCart = state.cart.map(item => {
 
                 if (item.id === id) {
+                    
                     return {
                         ...item,
                         Cost: parseInt(parseInt(item.Cost)+parseInt(Cost)),
@@ -25,6 +26,7 @@ const cart_reducer = (state, action) => {
                 total_amount: state.total_amount + parseInt(Cost),
                 // quantity: quantity + 1,
             };
+            
         }
 
             else{
