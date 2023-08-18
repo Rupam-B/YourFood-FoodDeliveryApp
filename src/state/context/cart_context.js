@@ -28,7 +28,7 @@ const initialState = {
     // cart: [],
     total_item:0,
     total_amount:getLocalAmountData(),
-    total_amount:0,
+    // total_amount:0,
     shipping_fee: 5000,
 };
 
