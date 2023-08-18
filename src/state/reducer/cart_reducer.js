@@ -23,7 +23,7 @@ const cart_reducer = (state, action) => {
                 ...state,
                 cart: updatedCart,
                 total_amount: state.total_amount + parseInt(Cost),
-                quantity: quantity + 1,
+                // quantity: quantity + 1,
             };
         }
 
