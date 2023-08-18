@@ -41,7 +41,7 @@
     font-size: 1.1rem;
     font-weight: bold;
     color: black;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
 }
 
 .brdr-radius{
@@ -49,6 +49,12 @@
 }
 .txt-red{
     color: rgb(175, 25, 25);
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+.txt-red:hover{
+    background-color: rgba(248, 76, 76, 0.2);
 }
 .total-set{
     margin: 2rem 2rem;
