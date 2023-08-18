@@ -46,13 +46,13 @@ const Cart = () => {
                   </div>
                 
 
-                <form className="card brdr-radius p-2">
+                {/* <form className="card brdr-radius p-2">
                   
                   <div className="input-group">
                     <input type="text" className="form-control" placeholder="Promo code" />
                     <button disabled={true} className="btn btn-secondary">Redeem</button>
                   </div>
-                </form>
+                </form> */}
               </div>
               <div className="col-md-7 col-lg-8">
                 <h4 className="mb-3">Billing address</h4>
