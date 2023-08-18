@@ -14,6 +14,9 @@
     font-weight: bolder;
     padding-top: 4rem;
 }
+.your-cart{
+    margin: 0 3rem;
+}
 
 
 .pdng-tp{
@@ -30,6 +33,35 @@
     margin: 0 1rem 0 0;
     object-fit: cover;
 }
+.text-set{
+    font-weight: bolder;
+    padding-top: .7rem;
+}
+.cost-span{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+    padding-right: 1.5rem;
+}
+
+.brdr-radius{
+    border-radius: 1rem;
+}
+.txt-red{
+    color: rgb(175, 25, 25);
+}
+.total-set{
+    margin: 2rem 2rem;
+    padding: .6rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(80, 80, 80,0.3);
+    border-radius: 2rem;
+}
+.total-set h6{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
 
 
 
@@ -43,5 +75,8 @@
     .check-out-heading{
         
         padding-top: 6rem;
+    }
+    .your-cart{
+        margin: 0 4rem;
     }
 }

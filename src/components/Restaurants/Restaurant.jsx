@@ -9,78 +9,8 @@ const restaurantData = (FoodRestaurantsData1.FoodRestaurantsdata1)
 
 const Restaurant = () => {
 
-  //   const restaurantData =[
-  //     {
-  //         id:1,
-  //         src:"/assets/Restaurant1.jpg",
-  //         state:'Chhattisgarh',
-  //         Name:"Silver Oak",
-  //         rating:"4.5",
-  //         menu:"Chicken curry, Paneer Masala , Veg Pulaw",
-  //         link:'../FoodRestaurant/FoodRestaurant.jsx'
-  //     },
-  //     {
-  //         id:2,
-  //         src:"/assets/Restaurant2.jpg",
-  //         state:'Pune',
-  //         Name:"Red Diamond",
-  //         rating:"4.6",
-  //         menu:"Paneer Handi ,Mutton Biryani, Egg Fry"
-  //     },
-  //     {
-  //         id:3,
-  //         src:"/assets/Restaurant3.jpg",
-  //         state:'Kolkata',
-  //         Name:"Bengal food",
-  //         rating:"4.7",
-  //         menu:"Fish Curry, Muttor Keema , Veg Pulaw"
-  //     },
-  //     {
-  //         id:4,
-  //         src:"/assets/Restaurant4.jpg",
-  //         state:'Andhra Pradesh',
-  //         Name:"PaneeSilvam",
-  //         rating:"4.6",
-  //         menu:"Idli , Dosa , Dal Fry, Jeera Rice"
-  //     },
-  //     {
-  //         id:5,
-  //         src:"/assets/Restaurant5.jpg",
-  //         state:'Odhisa',
-  //         Name:"River Side",
-  //         rating:"4.5",
-  //         menu:"Chicken BhunaMasala, Daal Makhni , Veg Biryani"
-  //     },
-  //     {
-  //         id:6,
-  //         src:"/assets/Restaurant6.jpg",
-  //         state:'Punjab',
-  //         Name:"Balle Balle",
-  //         rating:"4.8",
-  //         menu:"Chicken Kadhai, Chole Kulche , Butter Naan"
-  //     },
-  //     {
-  //         id:7,
-  //         src:"/assets/Restaurant7.jpg",
-  //         state:'Delhi',
-  //         Name:"Royal Food",
-  //         rating:"4.9",
-  //         menu:"Mutton Kasa, Chiken Korma, Sai Paneer"
-  //     },
-  //     {
-  //         id:8,
-  //         src:"/assets/Restaurant8.jpg",
-  //         state:'Bhopal',
-  //         Name:"Anand Hotel",
-  //         rating:"4.7",
-  //         menu:"Fish Fry, Chicken Rezala, Tawa Rooti"
-  //     }
-  // ]
   return (
     <>
-
-
-
       <div className="p-5 p-md-5 mb-1 rounded text-body-emphasis bg-dark" style={{ width: '100%', overflow: 'hidden' }}>
         <div className="col-lg-6 px-0">
           <h1 style={{ paddingTop: '2rem', fontWeight: 'bolder' }} className="display-4 fst-italic text-danger">Top Restaurants</h1>

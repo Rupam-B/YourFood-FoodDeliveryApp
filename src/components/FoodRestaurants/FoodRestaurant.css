@@ -37,6 +37,10 @@
   .rest-card button:hover{
     color: white !important;
   }
+  .rest-card a:hover{
+    color: white !important;
+  }
+  
 
 
 

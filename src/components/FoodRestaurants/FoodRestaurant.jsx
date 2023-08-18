@@ -3,10 +3,13 @@ import './FoodRestaurant.css'
 import { useParams } from 'react-router-dom';
 import FoodRestaurantsdata1 from './FoodRestaurantsData';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../state/context/cart_context';
 
 const FoodRestaurant = () => {
   let { id } = useParams();
   id = parseInt(id);
+
+  const{addToCart} = useCartContext()
 
 
   const accessdata = FoodRestaurantsdata1.FoodRestaurantsdata1;
@@ -59,7 +62,7 @@ const FoodRestaurant = () => {
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.Cost}</button>
-                  <Link to={'/Cart'} className='btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary'>Order Now</Link>
+                  <Link to={'/Cart'} onClick={()=>addToCart(items.id,items.FoodName,items.Cost,items.src)} className='btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary'>Order Now</Link>
                   {/* <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">Order Now</button> */}
                 </div>
               </div>

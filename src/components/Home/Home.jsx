@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
-import Offers from './Offers'
-import Favourite from './Favourites/Favourite'
+import Offers from '../Offers'
+import Favourite from '../Favourites/Favourite'
 
 const Home = () => {
   return (
