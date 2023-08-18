@@ -12,22 +12,22 @@ const getLocalCartData=()=>{
         return JSON.parse(localCartData)
     }
 }
-// const getLocalAmountData=()=>{
-//     let localAmountData = localStorage.getItem("localStoredAmount")
-//     if(localAmountData==null){
-//         return 0;
-//     }
-//     else{
-//         return JSON.parse(localAmountData)
-//     }
-// }
+const getLocalAmountData=()=>{
+    let localAmountData = localStorage.getItem("localStoredAmount")
+    if(localAmountData==0){
+        return 0;
+    }
+    else{
+        return JSON.parse(localAmountData)
+    }
+}
 
 
 const initialState = {
     cart: getLocalCartData(),
     // cart: [],
     total_item:0,
-    // total_amount:getLocalAmountData(),
+    total_amount:getLocalAmountData(),
     total_amount:0,
     shipping_fee: 5000,
 };
@@ -57,8 +57,8 @@ const CartProvider =({children})=>{
 
   useEffect(()=>{
     localStorage.setItem("localStoredCart", JSON.stringify(state.cart))
-    // localStorage.setItem("localStoredAmount", JSON.stringify(state.total_amount))
-  },[state.cart])
+    localStorage.setItem("localStoredAmount", JSON.stringify(state.total_amount))
+  },[state.cart,state.total_amount])
 
 
     return (<CartContext.Provider value={{...state, addToCart, removeCartItem}}>
