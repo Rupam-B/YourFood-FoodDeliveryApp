@@ -14,7 +14,7 @@ const getLocalCartData=()=>{
 }
 const getLocalAmountData=()=>{
     let localAmountData = localStorage.getItem("localStoredAmount")
-    if(localAmountData==0){
+    if(localAmountData==null){
         return 0;
     }
     else{
@@ -25,7 +25,6 @@ const getLocalAmountData=()=>{
 
 const initialState = {
     cart: getLocalCartData(),
-    // cart: [],
     total_item:0,
     total_amount:getLocalAmountData(),
     // total_amount:0,
