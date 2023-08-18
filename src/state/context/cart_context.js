@@ -5,7 +5,7 @@ const CartContext = createContext();
 
 const getLocalCartData=()=>{
     let localCartData = localStorage.getItem("localStoredCart")
-    if(localCartData===[]){
+    if(localCartData===null){
         return [];
     }
     else{
@@ -14,7 +14,7 @@ const getLocalCartData=()=>{
 }
 const getLocalAmountData=()=>{
     let localAmountData = localStorage.getItem("localStoredAmount")
-    if(localAmountData===0){
+    if(localAmountData===null){
         return 0;
     }
     else{
