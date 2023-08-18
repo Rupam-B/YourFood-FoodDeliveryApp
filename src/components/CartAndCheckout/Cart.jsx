@@ -27,14 +27,17 @@ const Cart = () => {
                 <ul className="list-group mb-3">
                   {cart.map((menu)=>(
                     <li key={menu.id} className="list-group-item d-flex justify-content-between lh-sm">
+
+                      {/* <div className='dsp-property'> */}
                     <div className='d-flex align-items-center'>
-                      <img style={{display:'inline'}} className='cart-show-img' src={menu.src} alt="" />
-                      <h6 style={{display:'inline'}} className="my-0">{menu.FoodName}</h6>
+                      <img className='cart-show-img' src={menu.src} alt="" />
+                      <h6 style={{width:'8rem'}} className="my-0">{menu.FoodName}</h6>
                     </div>
                     <div className='text-set d-flex'>
-                    <span className=" cost-span "> {menu.Cost}.00</span>
+                    <span className=" cost-span "> {menu.Cost}.00 ({menu.quantity})</span>
                     <span onClick={()=>removeCartItem(menu.id)} className="text-body-secondary  text-red"><i className="fa-solid txt-red fa-trash"></i></span>
-                    </div>
+                    {/* </div> */}
+                      </div>
                   </li>
 
                   ))}

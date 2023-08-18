@@ -25,6 +25,11 @@
 .pdng-bt{
     padding-bottom: 3rem;
 }
+/* .dsp-property{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+} */
 
 .cart-show-img{
     height: 3rem;
@@ -56,6 +61,7 @@
 .txt-red:hover{
     background-color: rgba(248, 76, 76, 0.2);
 }
+/* ----Total---- */
 .total-set{
     margin: 2rem 2rem;
     padding: .6rem;

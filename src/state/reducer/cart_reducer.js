@@ -2,16 +2,18 @@
 const cart_reducer = (state, action) => {
 
     if (action.type === "ADD_TO_CART") {
-        let { id, FoodName, Cost, src } = action.payload;
+        let { id, FoodName, Cost, src, quantity } = action.payload;
 
         const existingProduct = state.cart.find(item => item.id === id);
          if (existingProduct) {
-            // If the product exists, update its quantity (for example)
+            
             const updatedCart = state.cart.map(item => {
+
                 if (item.id === id) {
                     return {
                         ...item,
-                        Cost: parseInt(parseInt(Cost)+parseInt(Cost)) // You can adjust the logic as needed
+                        Cost: parseInt(parseInt(item.Cost)+parseInt(Cost)),
+                        quantity: item.quantity + 1,
                     };
                 }
                 return item;
@@ -21,6 +23,7 @@ const cart_reducer = (state, action) => {
                 ...state,
                 cart: updatedCart,
                 total_amount: state.total_amount + parseInt(Cost),
+                quantity: quantity + 1,
             };
         }
 
@@ -29,7 +32,8 @@ const cart_reducer = (state, action) => {
             id: id,
             FoodName,
             Cost,
-            src
+            src,
+            quantity
         };
       
     

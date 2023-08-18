@@ -21,7 +21,8 @@ const CartProvider =({children})=>{
             id, 
             FoodName,
             Cost,
-            src
+            src,
+            quantity:1
         }
     })
   };
