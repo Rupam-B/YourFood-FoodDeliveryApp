@@ -1,12 +1,34 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from '../reducer/cart_reducer'
 
 const CartContext = createContext();
 
+const getLocalCartData=()=>{
+    let localCartData = localStorage.getItem("localStoredCart")
+    if(localCartData===[]){
+        return [];
+    }
+    else{
+        return JSON.parse(localCartData)
+    }
+}
+const getLocalAmountData=()=>{
+    let localAmountData = localStorage.getItem("localStoredAmount")
+    if(localAmountData===0){
+        return 0;
+    }
+    else{
+        return JSON.parse(localAmountData)
+    }
+}
+
+
 const initialState = {
-    cart:[],
+    cart: getLocalCartData(),
+    // cart: [],
     total_item:0,
-    total_amount:0,
+    total_amount:getLocalAmountData(),
+    // total_amount:0,
     shipping_fee: 5000,
 };
 
@@ -33,9 +55,15 @@ const CartProvider =({children})=>{
     })
   };
 
-    return <CartContext.Provider value={{...state, addToCart, removeCartItem}}>
+  useEffect(()=>{
+    localStorage.setItem("localStoredCart", JSON.stringify(state.cart))
+    localStorage.setItem("localStoredAmount", JSON.stringify(state.total_amount))
+  },[state.cart,state.total_amount])
+
+
+    return (<CartContext.Provider value={{...state, addToCart, removeCartItem}}>
         {children}
-    </CartContext.Provider>;
+    </CartContext.Provider>);
 };
 
 const useCartContext =()=>{
