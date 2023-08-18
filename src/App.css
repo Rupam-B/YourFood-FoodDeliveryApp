@@ -28,6 +28,26 @@
   color: white;
   font-size: 22px;
 }
+.cart-positioning{
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.cart-item-positioning{
+  position: relative;
+  top: -3.5rem;
+  right: -1.3rem;
+  color: rgb(245, 245, 245);
+  font-size: 1.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  /* background-color: rgb(255, 0, 43,0.6); */
+  background-color: rgb(255, 0, 0,0.9);
+  text-align: center;
+  border-radius: 50%;
+  padding: 0;
+}
 
 
 /* Media-Querry */
@@ -44,6 +64,15 @@
 
   .nav-bar ul li a{
     font-size: 18px;
+  }
+  .cart-item-positioning{
+    position: relative;
+    top: -3rem;
+    right: -1rem;
+    color: rgb(245, 245, 245);
+    font-size: 1.3rem;
+    height: 1.8rem;
+    width: 1.8rem;
   }
   
   }

@@ -96,7 +96,7 @@ const Favourite = () => {
   <div className="card-body d-flex flex-column justify-content-center align-items-center">
     <h5 className="card-title ">{item.FoodName}</h5>
     <h6 className="card-text">₹ {item.Cost}</h6>
-    <Link to={'/Cart'} onClick={()=>addToCart(item.id,item.FoodName,item.Cost,item.src)} className='btn btn-danger'>Order Now</Link>
+    <Link onClick={()=>addToCart(item.id,item.FoodName,item.Cost,item.src)} className='btn btn-danger'>Order Now</Link>
   </div>
 </div>
     ))} 

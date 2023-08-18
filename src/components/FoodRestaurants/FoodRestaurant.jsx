@@ -62,7 +62,7 @@ const FoodRestaurant = () => {
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.Cost}</button>
-                  <Link to={'/Cart'} onClick={()=>addToCart(items.id,items.FoodName,items.Cost,items.src)} className='btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary'>Order Now</Link>
+                  <Link onClick={()=>addToCart(items.id,items.FoodName,items.Cost,items.src)} className='btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary'>Order Now</Link>
                   {/* <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">Order Now</button> */}
                 </div>
               </div>
