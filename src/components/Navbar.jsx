@@ -14,6 +14,11 @@ const Navbar = () => {
           <li >
             <Link to="/Restaurants" >Restaurants</Link>
           </li>
+          <li className='Log-In-positioning' >
+            <Link to="/Authen" >
+            <div className='Log-In'><i class="fa-solid fa-user user-icon"></i></div>
+            </Link>
+          </li>
           <li className='cart-positioning'>
             <Link to="/Cart" ><i class="fa-solid fa-cart-shopping"></i></Link>
             <div className='cart-item-positioning'>{cart.length}</div>

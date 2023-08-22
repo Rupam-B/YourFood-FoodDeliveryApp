@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Restaurant from './components/Restaurants/Restaurant';
 import FoodRestaurant from './components/FoodRestaurants/FoodRestaurant';
 import Cart from './components/CartAndCheckout/Cart';
+import Authen from './components/Authen/Authen';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/Restaurants' element={<Restaurant/>}/>
         <Route path='/FoodRestaurant/:id' element={<FoodRestaurant/>}/>
         <Route path='/Cart' element={<Cart/>}/>
+        <Route path='/Authen' element={<Authen/>}/>
       </Routes>
 
     </>
