@@ -8,7 +8,6 @@ const cart_reducer = (state, action) => {
          if (existingProduct) {
             alert("Item Added to cart")
             const updatedCart = state.cart.map(item => {
-
                 if (item.id === id) {
                     
                     return {
@@ -30,13 +29,13 @@ const cart_reducer = (state, action) => {
         }
 
             else{
-        let cartProduct = {
-            id: id,
-            FoodName,
-            Cost,
-            src,
-            quantity
-        };
+                let cartProduct = {
+                                    id: id,
+                                    FoodName,
+                                    Cost,
+                                    src,
+                                    quantity
+                                 };
       
     
         const total_amount= state.total_amount+ parseInt(Cost);

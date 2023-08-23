@@ -100,14 +100,18 @@ form p a{
     cursor: pointer;
     transition: background 1s;
 }
+.btn-field button:hover{
+    background: #2b016e;
+    
+}
 .input-group{
     height: 18rem;
 }
 
-.btn-field button.disabled{
+/* .btn-field button.disabled{
     background: #e6e2e2;
     color: #555;
-}
+} */
 #span{
     /* position: absolute; */
     /* right: -10; */

@@ -60,7 +60,15 @@
 .Log-In-positioning{
   position:absolute;
   right: 6rem;
-  top: 0.5rem;
+  /* top: 0.2rem; */
+}
+.Log-In-positioning-link{
+  width: 2rem;
+}
+.Auth-user-name{
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-align: center;
 }
 
 
@@ -92,7 +100,7 @@
   .Log-In-positioning{
     position:absolute;
     right: 5rem;
-    top: 0.3rem;
+    /* top: 0.3rem; */
   }
 
   .Log-In{

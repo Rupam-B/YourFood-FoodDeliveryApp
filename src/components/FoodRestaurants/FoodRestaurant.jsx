@@ -54,16 +54,16 @@ const FoodRestaurant = () => {
         
         <div  className='rest-card'>
       {d1.data.map((items)=>(
-        <div key={items.id} class="col border-none main-card" >
-          <div class="card shadow-sm main-card ">
+        <div key={items.id} className="col border-none main-card" >
+          <div className="card shadow-sm main-card ">
             <img src={items.src} alt="" width='100%'  className='object-fit adjst-hgt' style={{ borderRadius: '2rem 2rem 0 0' }} />
-            <div class="card-body wheatbg" style={{ borderRadius: '0 0 2rem 2rem' }}>
-              <p class="card-text fw-bolder">{items.FoodName}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.Cost}</button>
+            <div className="card-body wheatbg" style={{ borderRadius: '0 0 2rem 2rem' }}>
+              <p className="card-text fw-bolder">{items.FoodName}</p>
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">{items.Cost}</button>
                   <Link onClick={()=>addToCart(items.id,items.FoodName,items.Cost,items.src)} className='btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary'>Order Now</Link>
-                  {/* <button type="button" class="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">Order Now</button> */}
+                  {/* <button type="button" className="btn btn-sm btn-outline-secondary custom-outline-white fw-bolder text-secondary">Order Now</button> */}
                 </div>
               </div>
             </div>
