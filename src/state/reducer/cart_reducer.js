@@ -28,14 +28,8 @@ const cart_reducer = (state, action) => {
             
         }
 
-            else{
-                let cartProduct = {
-                                    id: id,
-                                    FoodName,
-                                    Cost,
-                                    src,
-                                    quantity
-                                 };
+        else{
+            let cartProduct = {id: id, FoodName,Cost,src,quantity};
       
     
         const total_amount= state.total_amount+ parseInt(Cost);

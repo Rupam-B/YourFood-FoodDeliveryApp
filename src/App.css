@@ -63,11 +63,15 @@
   /* top: 0.2rem; */
 }
 .Log-In-positioning-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 2rem;
 }
 .Auth-user-name{
+  color:blue;
   font-size: 0.8rem;
-  font-weight: 100;
+  font-weight: 800;
   text-align: center;
 }
 

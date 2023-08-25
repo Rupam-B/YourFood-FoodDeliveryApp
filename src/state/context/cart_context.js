@@ -23,11 +23,20 @@ const getLocalAmountData = () => {
 const getLocalUserDetails = () => {
   let localUserDetails = localStorage.getItem("localStoredUserDetails");
   if (localUserDetails) {
-    return JSON.parse(localUserDetails);
+    return JSON.parse(localUserDetails)
   } else {
     return [];
   }
 };
+const getLocalUserCheck = () => {
+  let localUserCheck = localStorage.getItem("localStoredUserCheck");
+  if (localUserCheck) {
+    return JSON.parse(localUserCheck)
+  } else {
+    return [];
+  }
+};
+// console.log(getLocalUserDetails())
 
 const initialState = {
   cart: getLocalCartData(),
@@ -38,16 +47,20 @@ const initialState = {
 };
 
 
+const dat = getLocalUserDetails();
+const checkdat = getLocalUserCheck();
 const initialStoreState = {
-  sendArr: getLocalUserDetails(),
+  sendArr:dat,
+  checkArr:checkdat
 };
 
+// console.log(checkArr)
 const CartProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [storeState, storeDispatch] = useReducer(store_useRreducer,initialStoreState);
 
-  console.log(storeState)
+  // console.log(storeState)
 
 
   const addToCart = (id, FoodName, Cost, src) => {
@@ -76,16 +89,23 @@ const CartProvider = ({ children }) => {
       payload: sendArr,
     });
   };
+  const LogInHere = (checkArr) => {
+    storeDispatch({
+      type: "SET_CHECK_ARR",
+      payload: checkArr,
+    });
+  };
 
   useEffect(() => {
     localStorage.setItem("localStoredCart", JSON.stringify(state.cart));
     localStorage.setItem("localStoredAmount",JSON.stringify(state.total_amount));
     localStorage.setItem("localStoredUserDetails",JSON.stringify(storeState.sendArr));
-  }, [state.cart, state.total_amount,storeState.sendArr]);
+    localStorage.setItem("localStoredUserCheck",JSON.stringify(storeState.checkArr));
+  }, [state.cart, state.total_amount,storeState.sendArr,storeState.checkArr]);
 
   return (
     <CartContext.Provider
-      value={{ ...state, ...storeState, addToCart, removeCartItem, SignUpHere }}
+      value={{ ...state, ...storeState, addToCart, removeCartItem, SignUpHere ,LogInHere}}
     >
       {children}
     </CartContext.Provider>

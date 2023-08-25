@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../state/context/cart_context'
 
 const Navbar = () => {
-  const {cart,sendArr}= useCartContext();
+  const {cart,checkArr}= useCartContext();
   return (
     <>
     <nav className='nav-bar'>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <li className='Log-In-positioning' >
             <Link className='Log-In-positioning-link' to="/Authen" >
             <div className='Log-In'><i className="fa-solid fa-user user-icon"></i></div>
-            <div className='Auth-user-name'>{sendArr.newname?sendArr.newname:'user'}</div>
+            <div className='Auth-user-name'>{checkArr.newname?checkArr.newname:'user'}</div>
             </Link>
           </li>
           <li className='cart-positioning'>
