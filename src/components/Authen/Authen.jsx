@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './AuthenStyle.css'
 import { useCartContext } from '../../state/context/cart_context'
-// import { Link } from 'react-router-dom';
 
 const Authen = () => {
 
   const cartContext=useCartContext();
-  // const nameRequired = cartContext.checkArr.newname;
+  
   // const {cartContext,checkArr}=useCartContext();
   // console.log(cartContext.checkArr);
 

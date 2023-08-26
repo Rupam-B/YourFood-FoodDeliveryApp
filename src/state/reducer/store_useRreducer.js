@@ -9,7 +9,6 @@ const store_useRreducer = (state, action) => {
             alert('Please Provide Valid Credentials')
         }
         else{
-            window.location.assign('/')
             alert('Signed Up succesfully ! Please LogIn')
             
             return { ...state,
@@ -23,7 +22,7 @@ const store_useRreducer = (state, action) => {
 
         const findArr =[...state.sendArr]
         const passArr = findArr.find((item)=>item.email===detailsOfUser.email&&item.password===detailsOfUser.password)
-        console.log(passArr)
+        // console.log(passArr)
         // if (passArr.newname===''||passArr.email===''||passArr.password==='') {
         if (passArr===undefined) {
 

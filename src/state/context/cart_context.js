@@ -51,7 +51,8 @@ const dat = getLocalUserDetails();
 const checkdat = getLocalUserCheck();
 const initialStoreState = {
   sendArr:dat,
-  checkArr:checkdat
+  checkArr:checkdat,
+  checknav:false
 };
 
 // console.log(checkArr)
