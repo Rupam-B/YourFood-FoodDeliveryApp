@@ -7,6 +7,7 @@ import Restaurant from './components/Restaurants/Restaurant';
 import FoodRestaurant from './components/FoodRestaurants/FoodRestaurant';
 import Cart from './components/CartAndCheckout/Cart';
 import Authen from './components/Authen/Authen';
+import PaymentSuccess from './components/PaymentResult/PaymentSuccess';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/FoodRestaurant/:id' element={<FoodRestaurant/>}/>
         <Route path='/Cart' element={<Cart/>}/>
         <Route path='/Authen' element={<Authen/>}/>
+        <Route path='/PaymentSuccess' element={<PaymentSuccess/>}/>
       </Routes>
 
     </>

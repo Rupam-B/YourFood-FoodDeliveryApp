@@ -15,6 +15,55 @@ const Cart = () => {
   const [fillUserName , setFillUserName] = useState(fillDetails.newname)
   const [fillEmail , setFillEmail] = useState(fillDetails.email)
 
+  // Razor Pay Setup----------
+  const loadScript = (src)=>{
+    return new Promise ((resolve) => {
+      const script = document.createElement('script')
+      script.src = src
+
+      script.onload = () =>{
+        resolve(true)
+      }
+      script.onerror = () =>{
+        resolve(false)
+      }
+
+      document.body.appendChild(script)
+    })
+  }
+ const displayRazorpay = async (amount)=>{
+
+  const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+  if(!res){
+    alert('You are offline... failed to load Razorpay SDK')
+    return
+  }
+
+  const options = {
+    key : 'rzp_test_raMrvMzHnIWOLu',
+    currency : "INR",
+    amount : amount * 100,
+    name : 'YourFood',
+    description : 'Thanks For Purchasing',
+    image : 'https://images.unsplash.com/photo-1617194191528-9a50cf609304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGZvb2QlMjBkZWxpdmVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    
+    handler : function (response) {
+      // alert(response.razorpay_payment_id)
+      // alert('Payment Successfull !')
+      window.location.assign('/PaymentSuccess')
+    },
+    prefill :{
+      name : fillDetails.newname,
+    }
+  };
+
+ const paymentObject = new window.Razorpay(options)
+ paymentObject.open()
+
+ }
+   
+  // ---------End Razorpay Setup
+
   return (
     <>
       <div className='page-container'>
@@ -57,15 +106,7 @@ const Cart = () => {
                   <h6 className="my-0">{total_amount}.00</h6>
 
                   </div>
-                
-
-                {/* <form className="card brdr-radius p-2">
-                  
-                  <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Promo code" />
-                    <button disabled={true} className="btn btn-secondary">Redeem</button>
-                  </div>
-                </form> */}
+              
               </div>
               <div className="col-md-7 col-lg-8">
                 <h4 className="mb-3">Billing address</h4>
@@ -73,7 +114,7 @@ const Cart = () => {
                   <div className="row g-3">
                     <div className="col-sm-6">
                       <label htmlFor="firstName" className="form-label">First name</label>
-                      <input type="text" value={fillName} onChange={(e)=>setFillName(e.target.value)} className="form-control" id="firstName" placeholder=""  required="" />
+                      <input autoComplete='on' type="text" value={fillName} onChange={(e)=>setFillName(e.target.value)} className="form-control" id="firstName" placeholder=""  required="" />
                       <div className="invalid-feedback">
                         Valid first name is required.
                       </div>
@@ -81,7 +122,7 @@ const Cart = () => {
 
                     <div className="col-sm-6">
                       <label htmlFor="lastName" className="form-label">Last name</label>
-                      <input type="text" className="form-control" id="lastName" placeholder=""  required="" />
+                      <input  type="text" className="form-control" id="lastName" placeholder=""  required="" />
                       <div className="invalid-feedback">
                         Valid last name is required.
                       </div>
@@ -91,7 +132,7 @@ const Cart = () => {
                       <label htmlFor="username" className="form-label">Username</label>
                       <div className="input-group has-validation">
                         <span className="input-group-text">@</span>
-                        <input type="text" value={fillUserName} onChange={(e)=>setFillUserName(e.target.value)} className="form-control" id="username" placeholder="Username" required="" />
+                        <input autoComplete='on' type="text" value={fillUserName} onChange={(e)=>setFillUserName(e.target.value)} className="form-control" id="username" placeholder="Username" required="" />
                         <div className="invalid-feedback">
                           Your username is required.
                         </div>
@@ -100,7 +141,7 @@ const Cart = () => {
 
                     <div className="col-12">
                       <label htmlFor="email" className="form-label">Email <span className="text-body-secondary">(Optional)</span></label>
-                      <input type="email" value={fillEmail} onChange={(e)=>setFillEmail(e.target.value)} className="form-control" id="email" placeholder="you@example.com" />
+                      <input autoComplete='on' type="email" value={fillEmail} onChange={(e)=>setFillEmail(e.target.value)} className="form-control" id="email" placeholder="you@example.com" />
                       <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                       </div>
@@ -108,7 +149,7 @@ const Cart = () => {
 
                     <div className="col-12">
                       <label htmlFor="address" className="form-label">Address</label>
-                      <input type="text" className="form-control" id="address" placeholder="1234 Main St" required="" />
+                      <input autoComplete='on' type="text" className="form-control" id="address" placeholder="1234 Main St" required="" />
                       <div className="invalid-feedback">
                         Please enter your shipping address.
                       </div>
@@ -117,7 +158,7 @@ const Cart = () => {
 
                     <div className="col-md-5">
                       <label htmlFor="country" className="form-label">Country</label>
-                      <select className="form-select" id="country" required="">
+                      <select autoComplete='on' className="form-select" id="country" required="">
                         <option >Choose...</option>
                         <option>India</option>
                       </select>
@@ -146,7 +187,7 @@ const Cart = () => {
 
                     <div className="col-md-3">
                       <label htmlFor="zip" className="form-label">Zip</label>
-                      <input type="text" className="form-control" id="zip" placeholder="" required="" />
+                      <input  type="text" className="form-control" id="zip" placeholder="" required="" />
                       <div className="invalid-feedback">
                         Zip code required.
                       </div>
@@ -167,61 +208,12 @@ const Cart = () => {
 
                   <hr className="my-4" />
 
-                  {/* <h4 className="mb-3">Payment</h4>
-
-                  <div className="my-3">
-                    <div className="form-check">
-                      <input id="credit" name="paymentMethod" type="radio" className="form-check-input"  required="" />
-                      <label className="form-check-label" htmlFor="credit">Credit card</label>
-                    </div>
-                    <div className="form-check">
-                      <input id="debit" name="paymentMethod" type="radio" className="form-check-input" required="" />
-                      <label className="form-check-label" htmlFor="debit">Debit card</label>
-                    </div>
-                    <div className="form-check">
-                      <input id="paypal" name="paymentMethod" type="radio" className="form-check-input" required="" />
-                      <label className="form-check-label" htmlFor="paypal">PayPal</label>
-                    </div>
-                  </div>
-
-                  <div className="row gy-3">
-                    <div className="col-md-6">
-                      <label htmlFor="cc-name" className="form-label">Name on card</label>
-                      <input type="text" className="form-control" id="cc-name" placeholder="" required="" />
-                      <small className="text-body-secondary">Full name as displayed on card</small>
-                      <div className="invalid-feedback">
-                        Name on card is required
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <label htmlFor="cc-number" className="form-label">Credit card number</label>
-                      <input type="text" className="form-control" id="cc-number" placeholder="" required="" />
-                      <div className="invalid-feedback">
-                        Credit card number is required
-                      </div>
-                    </div>
-
-                    <div className="col-md-3">
-                      <label htmlFor="cc-expiration" className="form-label">Expiration</label>
-                      <input type="text" className="form-control" id="cc-expiration" placeholder="" required="" />
-                      <div className="invalid-feedback">
-                        Expiration date required
-                      </div>
-                    </div>
-
-                    <div className="col-md-3">
-                      <label htmlFor="cc-cvv" className="form-label">CVV</label>
-                      <input type="text" className="form-control" id="cc-cvv" placeholder="" required="" />
-                      <div className="invalid-feedback">
-                        Security code required
-                      </div>
-                    </div>
-                  </div> */}
+                  
 
                   <hr className="my-4" />
 
-                  <button className="w-100 btn btn-primary btn-lg" type="submit">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button>
+                  {/* <button className="w-100 btn btn-primary btn-lg" type="submit">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button> */}
+                  <button type='button' onClick={()=>displayRazorpay(total_amount)} className="w-100 btn btn-primary btn-lg">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button>
                 </form>
               </div>
             </div>

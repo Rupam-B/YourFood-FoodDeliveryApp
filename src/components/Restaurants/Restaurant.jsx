@@ -18,7 +18,7 @@ const Restaurant = () => {
           <br /><br />
           <p className="lead mb-0 text-white"><a href="/" className="text-body-emphasis fw-bold text-decoration-none text-primary">Explore...</a></p>
         </div>
-        <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGZvb2QlMjByZXN0YXVyYW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" srcset="" className='Restimg' />
+        <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGZvb2QlMjByZXN0YXVyYW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" srcSet="" className='Restimg' />
       </div>
 
 
