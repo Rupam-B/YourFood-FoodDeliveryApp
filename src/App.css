@@ -60,7 +60,7 @@
 .Log-In-positioning{
   position:absolute;
   right: 6rem;
-  /* top: 0.2rem; */
+  top: -0.3rem;
 }
 .Log-In-positioning-link{
   display: flex;
