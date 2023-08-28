@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CartStyle.css'
 import { useCartContext } from '../../state/context/cart_context'
 
 const Cart = () => {
   const {cart, total_amount, removeCartItem} = useCartContext()
-  
+
+
+  // Accesing the context items
+  const cartContext = useCartContext();
+  const fillDetails = cartContext.checkArr;
+  // ........
+
+  const [fillName , setFillName] = useState(fillDetails.newname)
+  const [fillUserName , setFillUserName] = useState(fillDetails.newname)
+  const [fillEmail , setFillEmail] = useState(fillDetails.email)
+
   return (
     <>
       <div className='page-container'>
@@ -12,7 +22,7 @@ const Cart = () => {
 
         <div className='bgrnd-blk' >
           <div className=" text-center">
-            <h1 className='check-out-heading' >Checkout form</h1>
+            <h1 className='check-out-heading' >Cart Details</h1>
           </div>
         </div>
 
@@ -63,7 +73,7 @@ const Cart = () => {
                   <div className="row g-3">
                     <div className="col-sm-6">
                       <label htmlFor="firstName" className="form-label">First name</label>
-                      <input type="text" className="form-control" id="firstName" placeholder=""  required="" />
+                      <input type="text" value={fillName} onChange={(e)=>setFillName(e.target.value)} className="form-control" id="firstName" placeholder=""  required="" />
                       <div className="invalid-feedback">
                         Valid first name is required.
                       </div>
@@ -81,7 +91,7 @@ const Cart = () => {
                       <label htmlFor="username" className="form-label">Username</label>
                       <div className="input-group has-validation">
                         <span className="input-group-text">@</span>
-                        <input type="text" className="form-control" id="username" placeholder="Username" required="" />
+                        <input type="text" value={fillUserName} onChange={(e)=>setFillUserName(e.target.value)} className="form-control" id="username" placeholder="Username" required="" />
                         <div className="invalid-feedback">
                           Your username is required.
                         </div>
@@ -90,7 +100,7 @@ const Cart = () => {
 
                     <div className="col-12">
                       <label htmlFor="email" className="form-label">Email <span className="text-body-secondary">(Optional)</span></label>
-                      <input type="email" className="form-control" id="email" placeholder="you@example.com" />
+                      <input type="email" value={fillEmail} onChange={(e)=>setFillEmail(e.target.value)} className="form-control" id="email" placeholder="you@example.com" />
                       <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                       </div>
@@ -104,16 +114,12 @@ const Cart = () => {
                       </div>
                     </div>
 
-                    <div className="col-12">
-                      <label htmlFor="address2" className="form-label">Address 2 <span className="text-body-secondary">(Optional)</span></label>
-                      <input type="text" className="form-control" id="address2" placeholder="Apartment or suite" />
-                    </div>
 
                     <div className="col-md-5">
                       <label htmlFor="country" className="form-label">Country</label>
                       <select className="form-select" id="country" required="">
                         <option >Choose...</option>
-                        <option>United States</option>
+                        <option>India</option>
                       </select>
                       <div className="invalid-feedback">
                         Please select a valid country.
@@ -124,7 +130,14 @@ const Cart = () => {
                       <label htmlFor="state" className="form-label">State</label>
                       <select className="form-select" id="state" required="">
                         <option >Choose...</option>
-                        <option>California</option>
+                        <option>Chhattisgarh</option>
+                        <option>Kolkata</option>
+                        <option>Pune</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Odisa</option>
+                        <option>Punjab</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Delhi</option>
                       </select>
                       <div className="invalid-feedback">
                         Please provide a valid state.
@@ -154,7 +167,7 @@ const Cart = () => {
 
                   <hr className="my-4" />
 
-                  <h4 className="mb-3">Payment</h4>
+                  {/* <h4 className="mb-3">Payment</h4>
 
                   <div className="my-3">
                     <div className="form-check">
@@ -204,11 +217,11 @@ const Cart = () => {
                         Security code required
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <hr className="my-4" />
 
-                  <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                  <button className="w-100 btn btn-primary btn-lg" type="submit">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button>
                 </form>
               </div>
             </div>
