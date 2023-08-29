@@ -10,7 +10,7 @@ const Cart = () => {
   const cartContext = useCartContext();
   const fillDetails = cartContext.checkArr;
   // ........
-
+  const [isValid, setIsValid] = useState(false);
   const [fillName , setFillName] = useState(fillDetails.newname)
   const [fillUserName , setFillUserName] = useState(fillDetails.newname)
   const [fillEmail , setFillEmail] = useState(fillDetails.email)
@@ -31,7 +31,20 @@ const Cart = () => {
       document.body.appendChild(script)
     })
   }
+
+  const handleFormSubmit = (event) => {
+    if (!event.target.checkValidity()) {
+      setIsValid(false);
+      event.preventDefault();
+    }
+     else{  
+      setIsValid(true)
+      event.preventDefault();
+    }
+  }
+  
  const displayRazorpay = async (amount)=>{
+  console.log(isValid)
 
   const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
   if(!res){
@@ -110,11 +123,11 @@ const Cart = () => {
               </div>
               <div className="col-md-7 col-lg-8">
                 <h4 className="mb-3">Billing address</h4>
-                <form className="needs-validation">
+                <form onSubmit={handleFormSubmit} className="needs-validation">
                   <div className="row g-3">
                     <div className="col-sm-6">
                       <label htmlFor="firstName" className="form-label">First name</label>
-                      <input autoComplete='on' type="text" value={fillName} onChange={(e)=>setFillName(e.target.value)} className="form-control" id="firstName" placeholder=""  required="" />
+                      <input autoComplete='on' type="text" value={fillName} onChange={(e)=>setFillName(e.target.value)} className="form-control" id="firstName" placeholder=""  required/>
                       <div className="invalid-feedback">
                         Valid first name is required.
                       </div>
@@ -122,7 +135,7 @@ const Cart = () => {
 
                     <div className="col-sm-6">
                       <label htmlFor="lastName" className="form-label">Last name</label>
-                      <input  type="text" className="form-control" id="lastName" placeholder=""  required="" />
+                      <input  type="text" className="form-control" id="lastName" placeholder=""  required/>
                       <div className="invalid-feedback">
                         Valid last name is required.
                       </div>
@@ -132,7 +145,7 @@ const Cart = () => {
                       <label htmlFor="username" className="form-label">Username</label>
                       <div className="input-group has-validation">
                         <span className="input-group-text">@</span>
-                        <input autoComplete='on' type="text" value={fillUserName} onChange={(e)=>setFillUserName(e.target.value)} className="form-control" id="username" placeholder="Username" required="" />
+                        <input autoComplete='on' type="text" value={fillUserName} onChange={(e)=>setFillUserName(e.target.value)} className="form-control" id="username" placeholder="Username" required/>
                         <div className="invalid-feedback">
                           Your username is required.
                         </div>
@@ -141,7 +154,7 @@ const Cart = () => {
 
                     <div className="col-12">
                       <label htmlFor="email" className="form-label">Email <span className="text-body-secondary">(Optional)</span></label>
-                      <input autoComplete='on' type="email" value={fillEmail} onChange={(e)=>setFillEmail(e.target.value)} className="form-control" id="email" placeholder="you@example.com" />
+                      <input autoComplete='on' type="email" value={fillEmail} onChange={(e)=>setFillEmail(e.target.value)} className="form-control" id="email" placeholder="you@example.com" required/>
                       <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                       </div>
@@ -149,7 +162,7 @@ const Cart = () => {
 
                     <div className="col-12">
                       <label htmlFor="address" className="form-label">Address</label>
-                      <input autoComplete='on' type="text" className="form-control" id="address" placeholder="1234 Main St" required="" />
+                      <input autoComplete='on' type="text" className="form-control" id="address" placeholder="1234 Main St" required/>
                       <div className="invalid-feedback">
                         Please enter your shipping address.
                       </div>
@@ -158,8 +171,7 @@ const Cart = () => {
 
                     <div className="col-md-5">
                       <label htmlFor="country" className="form-label">Country</label>
-                      <select autoComplete='on' className="form-select" id="country" required="">
-                        <option >Choose...</option>
+                      <select autoComplete='on' className="form-select" id="country" required>
                         <option>India</option>
                       </select>
                       <div className="invalid-feedback">
@@ -169,8 +181,7 @@ const Cart = () => {
 
                     <div className="col-md-4">
                       <label htmlFor="state" className="form-label">State</label>
-                      <select className="form-select" id="state" required="">
-                        <option >Choose...</option>
+                      <select className="form-select" id="state" required>
                         <option>Chhattisgarh</option>
                         <option>Kolkata</option>
                         <option>Pune</option>
@@ -187,7 +198,7 @@ const Cart = () => {
 
                     <div className="col-md-3">
                       <label htmlFor="zip" className="form-label">Zip</label>
-                      <input  type="text" className="form-control" id="zip" placeholder="" required="" />
+                      <input  type="text" className="form-control" id="zip" placeholder="" required />
                       <div className="invalid-feedback">
                         Zip code required.
                       </div>
@@ -212,8 +223,9 @@ const Cart = () => {
 
                   <hr className="my-4" />
 
-                  {/* <button className="w-100 btn btn-primary btn-lg" type="submit">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button> */}
-                  <button type='button' onClick={()=>displayRazorpay(total_amount)} className="w-100 btn btn-primary btn-lg">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button>
+                  
+                  
+                  <button type='submit' onClick={() => {if (isValid) {displayRazorpay(total_amount)}}} className="w-100 btn btn-primary btn-lg">Proceed to Pay <span className='Check-out-span'>(INR {total_amount}.00)</span></button>
                 </form>
               </div>
             </div>
