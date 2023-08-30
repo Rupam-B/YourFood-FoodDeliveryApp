@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import './CartStyle.css'
 import { useCartContext } from '../../state/context/cart_context'
 
+
 const Cart = () => {
-  const {cart, total_amount, removeCartItem} = useCartContext()
+  const {cart, total_amount, removeCartItem} = useCartContext();
+  
 
 
   // Accesing the context items
   const cartContext = useCartContext();
   const fillDetails = cartContext.checkArr;
   // ........
+  
   const [isValid, setIsValid] = useState(false);
   const [fillName , setFillName] = useState(fillDetails.newname)
   const [fillUserName , setFillUserName] = useState(fillDetails.newname)
@@ -44,13 +47,15 @@ const Cart = () => {
   }
   
  const displayRazorpay = async (amount)=>{
-  console.log(isValid)
+  
 
   const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
   if(!res){
     alert('You are offline... failed to load Razorpay SDK')
     return
   }
+
+   
 
   const options = {
     key : 'rzp_test_raMrvMzHnIWOLu',
