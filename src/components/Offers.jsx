@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react'
+import './OffersStyle.css'
+
 
 const Offers = () => {
 
@@ -10,7 +12,8 @@ const Offers = () => {
    
   return (
     <>
-    <div className='Offers'><div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
+    <div className='Offers'>
+      <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
     <div className="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className=""></button>
@@ -32,7 +35,7 @@ const Offers = () => {
       </div>
       <div className="carousel-item">
       <div className="image-container">
-      <img src="/assets/offers211.jpg" alt="loading problem"  className="bd-placeholder-img object-fit" width="100%"   aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="/assets/offers211.jpg" alt="loading problem"  className="bd-placeholder-img " width="100%"   aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">
@@ -45,7 +48,7 @@ const Offers = () => {
       </div>
       <div className="carousel-item">
       <div className="image-container">
-      <img src="/assets/offers3111.jpg" alt="loading problem"  className="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+      <img src="https://images.unsplash.com/photo-1458644267420-66bc8a5f21e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ2fHxmb29kJTIwaW1hZ2VzJTIwd2lkZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="loading problem"  className="bd-placeholder-img object-fit" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"/>
       <div className='overlay'></div>
       </div>
         <div className="container">

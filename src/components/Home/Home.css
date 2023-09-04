@@ -34,35 +34,13 @@
   right: 5%;
   
 }
+.object-fit{
+  object-fit: cover;
+}
 
 /* Offers */
 
-.carousel-item img{
-  height: 35vh;
 
-}
-.offers{
-  padding-top: 5px;
-  margin-top: 10px;
-}
-.image-container {
-    position: relative;
-  }
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Change the last value (0.5) to control the opacity */
-  }
-img {
-    display: block;
-  }
-  .object-fit{
-    object-fit: cover;
-  }
 
 
 
@@ -86,13 +64,6 @@ img {
       font-size: 1.5rem;
       padding-top: 13%;
       right: 18%;
-    }
-    .carousel-item{
-      padding: 10px 0;
-    }
-    .carousel-item img{
-      height: 30vh;
-
     }
 
 
