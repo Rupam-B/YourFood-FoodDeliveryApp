@@ -5,7 +5,7 @@
 }
 .Restimg{
     position: absolute;
-    bottom: 17rem;
+    /* bottom: 17rem; */
     right: 4rem;
     border-radius: 2rem;
     width: 23rem;
@@ -16,6 +16,12 @@
 .Rest-Card-img{
     width: 20rem;
     height: 20rem;
+}
+
+.adjust-img-head{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 

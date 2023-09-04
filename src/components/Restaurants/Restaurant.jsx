@@ -11,7 +11,7 @@ const Restaurant = () => {
 
   return (
     <>
-      <div className="p-5 p-md-5 mb-1 rounded text-body-emphasis bg-dark" style={{ width: '100%', overflow: 'hidden' }}>
+      <div className="p-5 p-md-5 mb-1 rounded text-body-emphasis bg-dark adjust-img-head" style={{ width: '100%', overflow: 'hidden' }}>
         <div className="col-lg-6 px-0">
           <h1 style={{ paddingTop: '2rem', fontWeight: 'bolder' }} className="display-4 fst-italic text-danger">Top Restaurants</h1>
           <p className="lead my-3 text-white">We serve you with the quality food from the top picks of most of the customer and gurantees to deliver on time</p>
